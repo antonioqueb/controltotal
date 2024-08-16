@@ -1,4 +1,3 @@
-// app\shared-ui\FormHero.tsx
 "use client";
 
 // Componente del formulario
@@ -24,18 +23,18 @@ import {
 import { Textarea } from "@/app/shared-ui/textarea";
 import { handleBudgetRequest } from "@/app/actions/budgetActions";
 
+// Definición de las props, incluyendo className opcional
 interface FormHeroProps {
   className?: string;
 }
 
-
-const CardWithForm: React.FC = () => {
+const FormHero: React.FC<FormHeroProps> = ({ className }) => {
   const [descriptionError, setDescriptionError] = React.useState<string>('');
   const [phoneError, setPhoneError] = React.useState<string>('');
 
   const validateForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    
+
     const form = event.currentTarget;
     const description = form.description.value;
     const phone = form.phone.value;
@@ -63,7 +62,7 @@ const CardWithForm: React.FC = () => {
   return (
     <Card
       id="FormHero"
-      className="w-full min-h-xl max-w-2xl md:w-[900px] mx-auto md:mx-0 shadow-lg transform transition-all duration-300 rounded-tl-lg rounded-bl-lg rounded-tr-none rounded-br-none"
+      className={`w-full min-h-xl max-w-2xl md:w-[900px] mx-auto md:mx-0 shadow-lg transform transition-all duration-300 rounded-tl-lg rounded-bl-lg rounded-tr-none rounded-br-none ${className}`}
     >
       <CardHeader>
         <CardTitle className="text-2xl xl:text-4xl">Recibir Presupuesto</CardTitle>
@@ -175,4 +174,4 @@ const CardWithForm: React.FC = () => {
   );
 };
 
-export default CardWithForm;
+export default FormHero;
