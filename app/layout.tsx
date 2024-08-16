@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
-import { Rubik as FontSans } from "next/font/google"
+import { Rubik as FontSans } from "next/font/google";
 import "./globals.css";
 
-import { ThemeProvider } from "@/app/shared-ui/theme-provider"
 import SessionWrapper from "@/app/shared-ui/SessionWrapper";
+import { ThemeProvider } from "@/app/shared-ui/theme-provider";
 
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -29,7 +28,7 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased mx-6 xl:mx-8 2xl:mx-16",
           fontSans.variable
         )}
       >
