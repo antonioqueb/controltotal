@@ -22,8 +22,8 @@ export default function Testimonials() {
             avatarSrc="/placeholder-avatar.jpg"
           />
           <TestimonialCard
-            name="Luis G."
-            position="CEO, Historial Laboral"
+            name="Carlos P."
+            position="CEO, BarberApp"
             feedback="Es increíble lo rápido que los equipos arman los prototipos y los entregan. La calidad del trabajo es excelente y el soporte es inmejorable."
             initials="LG"
             avatarSrc="/placeholder-avatar.jpg"

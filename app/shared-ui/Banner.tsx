@@ -1,4 +1,3 @@
-// app\shared-ui\Banner.tsx
 import { CardDescription, CardHeader, CardTitle } from "@/app/shared-ui/card";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,7 +13,7 @@ const Banner: React.FC = () => {
           <CardDescription className="text-lg md:text-xl text-zinc-800 mb-3 text-balance dark:text-zinc-100 lg:pr-16">
             Las empresas y grupos comerciales a menudo enfrentan desafíos significativos para optimizar sus operaciones y mejorar la eficiencia. Estos problemas pueden obstaculizar su crecimiento y éxito.
           </CardDescription>
-          <div className="flex w-full flex-col md:flex-row pt-12 md:items-center py-6 space-y-4 md:space-y-0 md:space-x-4 w-10/12 lg:w-10/12">
+          <div className="flex w-10/12 lg:w-10/12 flex-col md:flex-row pt-12 md:items-center py-6 space-y-4 md:space-y-0 md:space-x-4">
             <Link href="/iniciar-proyecto">
               <p className="bg-primary text-white font-semibold dark:text-zinc-100 border border-primary p-3 h-12 rounded-lg text-xl text-center flex items-center justify-center flex-grow md:flex-grow-0">
                 Crear Proyecto

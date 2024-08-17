@@ -1,6 +1,4 @@
 "use client";
-
-// Componente del formulario
 import * as React from "react";
 import { Button } from "@/app/shared-ui/button";
 import {
@@ -23,7 +21,6 @@ import {
 import { Textarea } from "@/app/shared-ui/textarea";
 import { handleBudgetRequest } from "@/app/actions/budgetActions";
 
-// Definición de las props, incluyendo className opcional
 interface FormHeroProps {
   className?: string;
 }
@@ -62,11 +59,13 @@ const FormHero: React.FC<FormHeroProps> = ({ className }) => {
   return (
     <Card
       id="FormHero"
-      className={`w-full min-h-xl max-w-2xl md:w-[900px] mx-auto md:mx-0 shadow-lg transform transition-all duration-300 rounded-tl-lg rounded-bl-lg rounded-tr-none rounded-br-none ${className}`}
+      className={`w-full max-w-2xl mx-auto shadow-lg relative z-20 bg-white dark:bg-zinc-800 p-6 rounded-lg ${className}`}
     >
       <CardHeader>
-        <CardTitle className="text-2xl xl:text-4xl">Recibir Presupuesto</CardTitle>
-        <CardDescription className="text-lg">
+        <CardTitle className="text-2xl xl:text-4xl text-black dark:text-white">
+          Recibir Presupuesto
+        </CardTitle>
+        <CardDescription className="text-lg text-zinc-600 dark:text-zinc-300">
           Describa su proyecto para recibir una cotización personalizada.
         </CardDescription>
       </CardHeader>
@@ -74,7 +73,7 @@ const FormHero: React.FC<FormHeroProps> = ({ className }) => {
         <form action={handleBudgetRequest} className="py-2" onSubmit={validateForm}>
           <div className="grid w-full items-center gap-2">
             <div className="flex flex-col space-y-1.5 py-1">
-              <Label htmlFor="email" className="text-lg">
+              <Label htmlFor="email" className="text-lg text-zinc-800 dark:text-zinc-300">
                 Correo Electrónico
               </Label>
               <Input
@@ -82,32 +81,32 @@ const FormHero: React.FC<FormHeroProps> = ({ className }) => {
                 name="email"
                 type="email"
                 placeholder="correo@empresa.com"
-                className="text-base text-zinc-900 border border-zinc-300 dark:border-zinc-400 dark:text-zinc-50"
+                className="text-base text-zinc-900 dark:text-zinc-100 bg-white dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-600 placeholder-zinc-400 dark:placeholder-zinc-400"
                 required
               />
             </div>
             <div className="flex flex-col space-y-1.5 py-1">
-              <Label htmlFor="phone" className="text-lg">
+              <Label htmlFor="phone" className="text-lg text-zinc-800 dark:text-zinc-300">
                 Teléfono de Contacto
               </Label>
               <Input
                 id="phone"
                 name="phone"
-                className="text-base border border-zinc-300 dark:border-zinc-400"
+                className="text-base text-zinc-900 dark:text-zinc-100 bg-white dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-600 placeholder-zinc-400 dark:placeholder-zinc-400"
                 type="tel"
                 placeholder="Teléfono de contacto"
                 required
               />
-              {phoneError && <p className="text-red-600">{phoneError}</p>}
+              {phoneError && <p className="text-red-600 dark:text-red-400">{phoneError}</p>}
             </div>
             <div className="flex flex-col space-y-1.5 py-1">
-              <Label htmlFor="projectType" className="text-lg">
+              <Label htmlFor="projectType" className="text-lg text-zinc-800 dark:text-zinc-300">
                 Tipo de Proyecto
               </Label>
               <Select name="projectType">
                 <SelectTrigger
                   id="projectType"
-                  className="text-base border border-zinc-300 dark:border-zinc-400"
+                  className="text-base text-zinc-900 dark:text-zinc-100 bg-white dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-600"
                 >
                   <SelectValue placeholder="Seleccione el tipo de proyecto" />
                 </SelectTrigger>
@@ -149,20 +148,20 @@ const FormHero: React.FC<FormHeroProps> = ({ className }) => {
               </Select>
             </div>
             <div className="flex flex-col space-y-1.5 py-1">
-              <Label htmlFor="description" className="text-lg">
+              <Label htmlFor="description" className="text-lg text-zinc-800 dark:text-zinc-300">
                 Descripción del Proyecto
               </Label>
               <Textarea
                 id="description"
                 name="description"
-                className="text-base border border-zinc-300 dark:border-zinc-400"
+                className="text-base text-zinc-900 dark:text-zinc-100 bg-white dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-600 placeholder-zinc-400 dark:placeholder-zinc-400"
                 placeholder="Proporcione una descripción detallada del proyecto"
                 required
               />
-              {descriptionError && <p className="text-red-600">{descriptionError}</p>}
+              {descriptionError && <p className="text-red-600 dark:text-red-400">{descriptionError}</p>}
             </div>
           </div>
-          <CardFooter className="flex justify-between">
+          <CardFooter className="flex justify-end mt-8 gap-4">
             <Button variant="outline" type="button">
               Cancelar
             </Button>

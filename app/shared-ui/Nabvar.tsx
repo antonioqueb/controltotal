@@ -75,7 +75,7 @@ function NavigationMenuDemo() {
                       <Image src="/logo.svg" width={150} height={150} alt="logo" />
                     </div>
                     <p className="text-lg leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and Tailwind CSS.
+                      Desarrollo Cloud
                     </p>
                   </a>
                 </NavigationMenuLink>
