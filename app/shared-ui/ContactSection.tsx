@@ -68,6 +68,7 @@ const ContactSection: React.FC = () => {
               <div className="flex flex-col space-y-1.5">
                 <Label className="block text-lg font-medium text-zinc-700 dark:text-zinc-200" htmlFor="message">
                   Mensaje
+                  {/* a */}
                 </Label>
                 <Textarea
                   className="mt-1 block w-full rounded-md border-zinc-300 dark:bg-zinc-700 dark:text-zinc-100 shadow-sm focus:border-primary focus:ring-primary sm:text-lg"
@@ -93,7 +94,7 @@ const ContactSection: React.FC = () => {
         <div className="flex items-center justify-center">
           <Image
             alt="Contact Image"
-            className="object-cover rounded-lg w-full h-full"
+            className="object-cover rounded-lg w-full h-full" 
             src="/contact.jpg"
             width={500}
             height={500}
